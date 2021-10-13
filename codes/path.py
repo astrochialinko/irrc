@@ -10,19 +10,15 @@ import os
 # ROOT_DIR: full path up to the irrc
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__)) + "/.."
 
-# original catalog
-catalog_org_vla    = ROOT_DIR + '/Original_Data/COSMOS/Catalog/VLA/'
-
 # catalog
-catalog             = ROOT_DIR + '/data/COSMOS/Catalog/'
-catalog_crossmatch = ROOT_DIR + '/data/COSMOS/Catalog/CrossMatch/'
+PATH_CATALOG        = ROOT_DIR + '/../data/COSMOS/Catalog/'
+PATH_ORG_CATALOG    = ROOT_DIR + '/../original_data/COSMOS/Catalog/'
 
 # image
-image_jcmt  = ROOT_DIR + '/data/COSMOS/Image/submm_JCMT/'
-image_vla   = ROOT_DIR + '/data/COSMOS/Image/radio_VLA/'
+PATH_IMG    = ROOT_DIR + '/../data/COSMOS/Image/'
 
 # table
-table   = ROOT_DIR + '/data/Tables/'
+PATH_TABLE  = ROOT_DIR + '/../data/COSMOS/Tables/'
 
 # figure
-figure  = ROOT_DIR + 'output/Figures/'
+PATH_FIGURE = ROOT_DIR + '/output/Figures/'

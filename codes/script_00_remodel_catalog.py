@@ -2,7 +2,7 @@
 File: script_00_remodel_catalog.py
 Name: Chia-Lin Ko
 Date: Jul 23, 2021
-Last Modified Date: Oct 11, 2021
+Last Modified Date: Oct 13, 2021
 ------------------------
 This program aims to rename and convert the original catalog 
 from the archive websites to csv and fits format for analysis.
@@ -11,33 +11,22 @@ import os
 from astropy.table import Table
 
 # my own packing
-import path
-from sfg_data.data_consts import DATA_PATH
-
-# Constant
-# path
-PATH_CATALOG_ORG_VLA    = path.catalog_org_vla
-
-PATH_CATALOG_JCMT       = path.catalog_jcmt
-PATH_CATALOG_VLA        = path.catalog_vla
-PATH_CATALOG_IRAC       = path.catalog_irac
-PATH_CATALOG_MIPS       = path.catalog_mips
-PATH_CATALOG_CROSSMATCH = path.catalog_crossmatch
+from path import PATH_CATALOG, PATH_ORG_CATALOG
 
 
 def main():
 
-
-    # VLA 3 GHz COSMOS-XS Survey
+    # VLA 3 GHz COSMOS-XS Survey    
     remodel_table(
-        fn_in = '%sapjabb77at6_mrt.txt'%(PATH_CATALOG_ORG_VLA+'COSMOS_XS/'),
-        fn_out = '%scosmos_vla_3GHz_10GHz_XS_2021cat'%(PATH_CATALOG_VLA),
+        fn_in = PATH_ORG_CATALOG+'radio_VLA/COSMOS_XS/'+'apjabb77at6_mrt.txt',
+        fn_out = PATH_CATALOG+'cosmos_vla_3GHz_10GHz_XS_2021cat',
         added_col_name='_3GHzXS',
         is_save_csv=True,
         is_save_fits=True
-        )    
+        )
 
-
+    
+# Function for remodel tables
 def remodel_table(fn_in, fn_out, added_col_name=None, is_save_csv=True, is_save_fits=True):
     t = Table.read(fn_in, format="ascii.cds")
     if added_col_name is not None:
