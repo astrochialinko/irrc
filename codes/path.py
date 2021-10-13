@@ -14,11 +14,7 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__)) + "/.."
 catalog_org_vla    = ROOT_DIR + '/Original_Data/COSMOS/Catalog/VLA/'
 
 # catalog
-catalog_jcmt       = ROOT_DIR + '/data/COSMOS/Catalog/submm_JCMT/'
-catalog_vla        = ROOT_DIR + '/data/COSMOS/Catalog/radio_VLA/'
-catalog_irac       = ROOT_DIR + '/data/COSMOS/Catalog/nearIR_IRAC/'
-catalog_mips       = ROOT_DIR + '/data/COSMOS/Catalog/midIR_MIPS/'
-catalog_opt        = ROOT_DIR + '/data/COSMOS/Catalog/opt_COSMOS2015/'
+catalog             = ROOT_DIR + '/data/COSMOS/Catalog/'
 catalog_crossmatch = ROOT_DIR + '/data/COSMOS/Catalog/CrossMatch/'
 
 # image
