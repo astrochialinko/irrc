@@ -1,4 +1,12 @@
 # VLA 3 GHz COSMOS-XS Survey
-radio_VLA/COSMOS_XS/apjabb77at6_mrt.txt     cosmos_vla_3GHz_10GHz_XS_2021cat    _3GHzXS
+radio_VLA/3GHz/vla3_cosmos_sources_160321_public5sig.fits                           cosmos_vla_3GHz_2017cat                 _3GHzlp
+radio_VLA/3GHz/VLA_3GHz_counterpart_array_20170210_paper_smolcic_et_al.fits         cosmos_vla_3GHz_multiAGN_2017cat        _3GHzMultiAGN
+radio_VLA/3GHz/VLA_3GHz_counterpart_array_20170210_paper_delvecchio_et_al.fits      cosmos_vla_3GHz_Del_2017cat             _3GHzDel17
+radio_VLA/COSMOS_XS/apjabb77at6_mrt.txt                                             cosmos_vla_3GHz_10GHz_XS_2021cat        _3GHzXS
 # VLA 1.4 GHz / 20cm
-radio_VLA/COSMOS_XS/COSMOS_Lband_group_by_isl_False_correct_flux.fits     cosmos_vla_1d4GHz_XS_2021cat    _1d4GHzXS
+radio_VLA/1d4GHz/vla-cosmos_pilot_20040729.tbl                                      cosmos_vla_1d4GHz_pilot_2004cat         _1d4GHzpilot
+radio_VLA/1d4GHz/vla-cosmos_lp_multi_20060510.tbl                                   cosmos_vla_1d4GHz_lpv1_multi_2006cat    _1d4GHzlpv1multi
+radio_VLA/1d4GHz/vla-cosmos_lp_sources_20060510.tbl                                 cosmos_vla_1d4GHz_lpv1_2006cat          _1d4GHzlpv1
+radio_VLA/1d4GHz/vla-cosmos_lp_sources_v2_20080615.tbl                              cosmos_vla_1d4GHz_lpv2_2008cat          _1d4GHzlpv2
+radio_VLA/1d4GHz/vla-cosmos_dp_sources_20110801.tbl                                 cosmos_vla_1d4GHz_dp_2011cat            _1d4GHzdp
+radio_VLA/COSMOS_XS/COSMOS_Lband_group_by_isl_False_correct_flux.fits               cosmos_vla_1d4GHz_XS_2021cat            _1d4GHzXS
