@@ -1,0 +1,4 @@
+# VLA 3 GHz COSMOS-XS Survey
+radio_VLA/COSMOS_XS/apjabb77at6_mrt.txt     cosmos_vla_3GHz_10GHz_XS_2021cat    _3GHzXS
+# VLA 1.4 GHz / 20cm
+radio_VLA/COSMOS_XS/COSMOS_Lband_group_by_isl_False_correct_flux.fits     cosmos_vla_1d4GHz_XS_2021cat    _1d4GHzXS
