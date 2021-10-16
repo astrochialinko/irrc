@@ -47,10 +47,11 @@ def read_catalog_txt(fn_txt):
     # read the txt
     fn_in_lst, fn_out_lst, add_col_name_lst = [], [], []
     for line in lines:
-        seg=line[:-1].split()
-        fn_in_lst.append(seg[0])
-        fn_out_lst.append(seg[1])
-        add_col_name_lst.append(seg[2])
+        if line.strip(): # remove the blank line
+            seg=line[:-1].split()
+            fn_in_lst.append(seg[0])
+            fn_out_lst.append(seg[1])
+            add_col_name_lst.append(seg[2])
     
     return  fn_in_lst, fn_out_lst, add_col_name_lst
 
@@ -60,10 +61,14 @@ def remodel_table(fn_in, fn_out, added_col_name=None, is_save_csv=True, is_save_
     # input table format
     if 'txt' in fn_in:
         tb_format ='ascii.cds'
+    elif 'tbl' in fn_in:
+        tb_format ='ascii'
     elif 'fits' in fn_in:
         tb_format = 'fits'
     elif 'csv' in fn_in:
         tb_format = 'csv'
+    else:
+        print('Please check your input catalog format')
 
     t = Table.read(fn_in, format=tb_format)
 
