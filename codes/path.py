@@ -11,8 +11,10 @@ import os
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__)) + "/.."
 
 # catalog
-PATH_CATALOG        = ROOT_DIR + '/../data/COSMOS/Catalog/'
-PATH_ORG_CATALOG    = ROOT_DIR + '/../original_data/COSMOS/Catalog/'
+PATH_ORG_CATALOG        = ROOT_DIR + '/../original_data/COSMOS/Catalog/'
+PATH_CATALOG            = ROOT_DIR + '/../data/COSMOS/Catalog/'
+PATH_CATALOG_CROSSMATCH = ROOT_DIR + '/../data/COSMOS/Catalog/CrossMatch/'
+
 
 # image
 PATH_IMG    = ROOT_DIR + '/../data/COSMOS/Image/'

@@ -8,6 +8,7 @@ This program aims to rename and convert the original catalog
 from the archive websites to csv and fits format for analysis.
 """
 import os
+import pandas as pd
 from astropy.table import Table
 
 # my own packing
@@ -33,7 +34,6 @@ def main():
             is_save_csv=True,
             is_save_fits=True
         )
-    
 
 # Function for remodel tables
 def read_catalog_txt(fn_txt):

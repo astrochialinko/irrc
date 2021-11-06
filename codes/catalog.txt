@@ -1,3 +1,6 @@
+# original path/filename                                                            new filename                             
+#---------------------------------------------------------------------------------------------------------------------------------------------
+
 # optical
 opt_COSMOS2015/COSMOS2015_Laigle+_v1.1.fits                                         cosmos_opt_cosmos_2015cat               _opt
 
@@ -17,7 +20,7 @@ IR_Spitzer/scosmos_mips_70_cat_v3.tbl                                           
 IR_Spitzer/scosmos_mips_160_cat_v3.tbl                                              cosmos_mips_160um_2009cat               _160um
 
 # Super-deblended
-#Super_Deblended/COSMOS_Super_Deblended_FIRmm_Catalog_20180719.fits                 cosmos_mips_24um_superDeblended_2018cat _24umSD
+#Super_Deblended/COSMOS_Super_Deblended_FIRmm_Catalog_20180719.fits                  cosmos_mips_24um_superDeblended_2018cat _24umSD
 
 # VLA 3 GHz COSMOS-XS Survey
 radio_VLA/COSMOS_XS/apjabb77at6_mrt.txt                                             cosmos_vla_3GHz_10GHz_XS_2021cat        _3GHzXS
