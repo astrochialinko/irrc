@@ -35,6 +35,7 @@ def main():
             is_save_fits=True
         )
 
+#-----------------------------------------------------------
 # Function for remodel tables
 def read_catalog_txt(fn_txt):
     with open(fn_txt) as f:
