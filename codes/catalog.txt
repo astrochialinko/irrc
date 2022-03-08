@@ -5,7 +5,7 @@
 opt_COSMOS2015/COSMOS2015_Laigle+_v1.1.fits                                         cosmos_opt_cosmos_2015cat               _opt
 
 # Spitzer/IRAC 3.6, 4.5, 5.6, 8.0 um
-IR_Spitzer/scosmos_irac_200706.tbl                                                  cosmos_irac_2007cat                     _iras
+IR_Spitzer/scosmos_irac_200706.tbl                                                  cosmos_irac_2007cat                     _irac
 
 # Spitzer/MIPS 24 um
 IR_Spitzer/MIPS_24_LeFloch.tbl                                                      cosmos_mips_24um_LeFloch_2008cat        _24umLeFloch
