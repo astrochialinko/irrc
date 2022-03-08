@@ -29,6 +29,8 @@ def main():
     crossmatch_450um(fn_dict)
     crossmatch_1d4GHz(fn_dict)
     crossmatch_3GHz(fn_dict)
+    crossmatch_MIPS(fn_dict)
+    crossmatch_IRAC(fn_dict)
 
     
 #-----------------------------------------------------------
@@ -59,23 +61,29 @@ def set_filename():
     fn_dict['fn_match_UgneLim_1d4GHzXS']                    = '%scosmos_match_450umUgneLim_1d4GHzXS.csv'%(PATH_CATALOG_CROSSMATCH)
     fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp']             = '%scosmos_match_450umUgneLim_1d4GHzXS_3GHzlp.csv'%(PATH_CATALOG_CROSSMATCH)
     fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_irac']        = '%scosmos_match_450umUgneLim_1d4GHzXS_3GHzlp_irac.csv'%(PATH_CATALOG_CROSSMATCH)
-    fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mips']        = '%scosmos_match_450umUgneLim_1d4GHzXS_3GHzlp_mips.csv'%(PATH_CATALOG_CROSSMATCH)
-    fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mips_irac']   = '%scosmos_match_450umUgneLim_1d4GHzXS_3GHzlp_mips_irac.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsW']       = '%scosmos_match_450umUgneLim_1d4GHzXS_3GHzlp_mipsW.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsL']       = '%scosmos_match_450umUgneLim_1d4GHzXS_3GHzlp_mipsL.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsW_irac']  = '%scosmos_match_450umUgneLim_1d4GHzXS_3GHzlp_mipsW_irac.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsL_irac']  = '%scosmos_match_450umUgneLim_1d4GHzXS_3GHzlp_mipsL_irac.csv'%(PATH_CATALOG_CROSSMATCH)
 
     # Lim based crossmatch catalogs
     fn_dict['fn_match_Lim_1d4GHzXS']                        = '%scosmos_match_450umLim_1d4GHzXS.csv'%(PATH_CATALOG_CROSSMATCH)
     fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp']                 = '%scosmos_match_450umLim_1d4GHzXS_3GHzlp.csv'%(PATH_CATALOG_CROSSMATCH)
     fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_irac']            = '%scosmos_match_450umLim_1d4GHzXS_3GHzlp_irac.csv'%(PATH_CATALOG_CROSSMATCH)
-    fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mips']            = '%scosmos_match_450umLim_1d4GHzXS_3GHzlp_mips.csv'%(PATH_CATALOG_CROSSMATCH)
-    fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mips_irac']       = '%scosmos_match_450umLim_1d4GHzXS_3GHzlp_mips_irac.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsW']            = '%scosmos_match_450umLim_1d4GHzXS_3GHzlp_mipsW.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsL']            = '%scosmos_match_450umLim_1d4GHzXS_3GHzlp_mipsL.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsW_irac']       = '%scosmos_match_450umLim_1d4GHzXS_3GHzlp_mipsW_irac.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsL_irac']       = '%scosmos_match_450umLim_1d4GHzXS_3GHzlp_mipsL_irac.csv'%(PATH_CATALOG_CROSSMATCH)
 
     # Gao based crossmatch catalogs
     fn_dict['fn_match_GaoLim']                             = '%scosmos_match_450umGaoLim.csv'%(PATH_CATALOG_CROSSMATCH)
     fn_dict['fn_match_GaoLim_1d4GHzXS']                    = '%scosmos_match_450umGaoLim_1d4GHzXS.csv'%(PATH_CATALOG_CROSSMATCH)
     fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp']             = '%scosmos_match_450umGaoLim_1d4GHzXS_3GHzlp.csv'%(PATH_CATALOG_CROSSMATCH)
     fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_irac']        = '%scosmos_match_450umGaoLim_1d4GHzXS_3GHzlp_irac.csv'%(PATH_CATALOG_CROSSMATCH)
-    fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mips']        = '%scosmos_match_450umGaoLim_1d4GHzXS_3GHzlp_mips.csv'%(PATH_CATALOG_CROSSMATCH)
-    fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mips_irac']   = '%scosmos_match_450umGaoLim_1d4GHzXS_3GHzlp_mips_irac.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsW']       = '%scosmos_match_450umGaoLim_1d4GHzXS_3GHzlp_mipsW.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsL']       = '%scosmos_match_450umGaoLim_1d4GHzXS_3GHzlp_mipsL.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsW_irac']  = '%scosmos_match_450umGaoLim_1d4GHzXS_3GHzlp_mipsW_irac.csv'%(PATH_CATALOG_CROSSMATCH)
+    fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsL_irac']  = '%scosmos_match_450umGaoLim_1d4GHzXS_3GHzlp_mipsL_irac.csv'%(PATH_CATALOG_CROSSMATCH)
 
     return fn_dict
 
@@ -143,11 +151,6 @@ def crossmatch_3GHz(fn_dict):
     input_dict['VLA_3GHzlp']                = [fn_dict['fn_VLA_3GHzlp']  ]
     input_dict['VLA_3GHzAGN']               = [fn_dict['fn_VLA_3GHzAGN'] ]
     input_dict['VLA_3GHzlpAGN']             = [fn_dict['fn_match_3GHzlpAGN'],               'ra_3GHzlp',    'dec_3GHzlp']
-    input_dict['VLA_1d4GHzdp']              = [fn_dict['fn_VLA_1d4GHzdp'],                  'ra_1d4GHzdp',  'dec_1d4GHzdp']
-    input_dict['VLA_1d4GHzXS']              = [fn_dict['fn_VLA_1d4GHzXS'],                  'RA_1d4GHzXS',  'DEC_1d4GHzXS']
-    
-    input_dict['VLA_3GHzlpAGN_1d4GHzdp']    = [fn_dict['fn_match_3GHzlpAGN_1d4GHzdp'],    'ra_3GHzlp',      'dec_3GHzlp']
-    input_dict['VLA_3GHzlpAGN_1d4GHzXS']    = [fn_dict['fn_match_3GHzlpAGN_1d4GHzXS'],    'ra_3GHzlp',      'dec_3GHzlp']
 
     input_dict['match_UgneLim_1d4GHzXS']    = [fn_dict['fn_match_UgneLim_1d4GHzXS'],    'RA_450umLim',    'DEC_450umLim']
     input_dict['match_Lim_1d4GHzXS']        = [fn_dict['fn_match_Lim_1d4GHzXS'],        'RA_450umLim',    'DEC_450umLim']
@@ -155,15 +158,14 @@ def crossmatch_3GHz(fn_dict):
     
     do_merge_value(input_dict, f1_key= 'VLA_3GHzlp', f2_key = 'VLA_3GHzAGN', 
         f1_value='id_3GHzlp', f2_value='ID_VLA_3GHzMultiAGN', join_type = 'outer', fn_match = fn_dict['fn_match_3GHzlpAGN'])
-    do_merge_radec(input_dict, f1_key= 'VLA_3GHzlpAGN', f2_key = 'VLA_1d4GHzdp', radius=1, fn_bestmatch = fn_dict['fn_match_3GHzlpAGN_1d4GHzdp'])
-    do_merge_radec(input_dict, f1_key= 'VLA_3GHzlpAGN', f2_key = 'VLA_1d4GHzXS', radius=1, fn_bestmatch = fn_dict['fn_match_3GHzlpAGN_1d4GHzXS'])
 
-    do_merge_radec(input_dict, f1_key= 'match_UgneLim_1d4GHzXS',f2_key = 'VLA_3GHzlpAGN_1d4GHzXS', radius=4, fn_bestmatch = fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp'])
-    do_merge_radec(input_dict, f1_key= 'match_Lim_1d4GHzXS',    f2_key = 'VLA_3GHzlpAGN_1d4GHzXS', radius=4, fn_bestmatch = fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp'])
-    do_merge_radec(input_dict, f1_key= 'match_GaoLim_1d4GHzXS', f2_key = 'VLA_3GHzlpAGN_1d4GHzXS', radius=4, fn_bestmatch = fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp'])
-    #set_RadioDet(fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp'],   fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp'])
-    #set_RadioDet(fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp'],       fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp'])
-    #set_RadioDet(fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp'],    fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp'])
+    do_merge_radec(input_dict, f1_key= 'match_UgneLim_1d4GHzXS',f2_key = 'VLA_3GHzlpAGN', radius=4, fn_bestmatch = fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp'])
+    do_merge_radec(input_dict, f1_key= 'match_Lim_1d4GHzXS',    f2_key = 'VLA_3GHzlpAGN', radius=4, fn_bestmatch = fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp'])
+    do_merge_radec(input_dict, f1_key= 'match_GaoLim_1d4GHzXS', f2_key = 'VLA_3GHzlpAGN', radius=4, fn_bestmatch = fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp'])
+    
+    set_RadioDet(fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp'],   fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp'])
+    set_RadioDet(fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp'],       fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp'])
+    set_RadioDet(fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp'],    fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp'])
 
 def set_RadioDet(fn_in, fn_out):
 
@@ -172,8 +174,11 @@ def set_RadioDet(fn_in, fn_out):
     df['ra_err_radio']  = np.where(df['ra_3GHzlp'].notna(), df['ra_err_3GHzlp'], df['E_RA_1d4GHzXS'])
     df['dec_radio']     = np.where(df['ra_3GHzlp'].notna(), df['dec_3GHzlp'], df['DEC_1d4GHzXS'])
     df['dec_err_radio'] = np.where(df['ra_3GHzlp'].notna(), df['dec_err_3GHzlp'], df['E_DEC_1d4GHzXS'])
-    df['radio_det']     = np.where(df['ra_3GHzlp'].notna(), '3',
-                                   np.where(df['RA_1d4GHzXS'].notna(), '1.4', np.nan))
+
+    # radio detection
+    conditions          = [df['ra_3GHzlp'].notna() & df['RA_1d4GHzXS'].notna(), df['ra_3GHzlp'].notna(), df['RA_1d4GHzXS'].notna()]
+    choices             = ['3 & 1.4', '3', '1.4']
+    df['radio_det']     = np.select(conditions, choices, default=np.nan)
 
     if 'Unnamed: 0' in df.columns:
         df.drop(df.columns[df.columns.str.contains('unnamed',case = False)],axis = 1, inplace = True)
@@ -181,6 +186,88 @@ def set_RadioDet(fn_in, fn_out):
     # save csv
     df.to_csv(fn_out, index=True, header=True)
     print('Save matched catalog %s'%(fn_out))
+
+def crossmatch_MIPS(fn_dict):
+    
+    fn_Ugne_mipsL    = fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsL']
+    fn_Ugne_mipsW    = fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsW']
+    fn_Lim_mipsL     = fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsL']
+    fn_Lim_mipsW     = fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsW']    
+    fn_Gao_mipsL     = fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsL']
+    fn_Gao_mipsW     = fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsW']
+
+    
+    input_dict = {} # filename, column_ra, column_dec
+    input_dict['MIPS_LeFloch']                     = [fn_dict['fn_MIPS_LeFloch'],                      'RA_J2000_24umLeFloch',  'DEC_J2000_24umLeFloch']
+    input_dict['MIPS_whwang']                      = [fn_dict['fn_MIPS_whwang'],                       'RA_mips24_24umWang',    'DEC_mips24_24umWang']
+    input_dict['match_UgneLim_1d4GHzXS_3GHzlp']    = [fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp'],     'RA_450umLim',           'DEC_450umLim']
+    input_dict['match_Lim_1d4GHzXS_3GHzlp']        = [fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp'],         'RA_450umLim',           'DEC_450umLim']
+    input_dict['match_GaoLim_1d4GHzXS_3GHzlp']     = [fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp'],      'RA_450umGao',           'Dec_450umGao']    
+
+    # LeFloch
+    do_merge_radec(input_dict, f1_key= 'match_UgneLim_1d4GHzXS_3GHzlp',f2_key = 'MIPS_LeFloch', radius=4, fn_bestmatch = fn_Ugne_mipsL)
+    do_merge_radec(input_dict, f1_key= 'match_Lim_1d4GHzXS_3GHzlp',    f2_key = 'MIPS_LeFloch', radius=4, fn_bestmatch = fn_Lim_mipsL)
+    do_merge_radec(input_dict, f1_key= 'match_GaoLim_1d4GHzXS_3GHzlp', f2_key = 'MIPS_LeFloch', radius=4, fn_bestmatch = fn_Gao_mipsL)
+    set_RadioNotDet_MipsDet(fn_Ugne_mipsL, fn_Ugne_mipsL, mips='LeFloch')
+    set_RadioNotDet_MipsDet(fn_Lim_mipsL,  fn_Lim_mipsL, mips='LeFloch')
+    set_RadioNotDet_MipsDet(fn_Gao_mipsL,  fn_Gao_mipsL, mips='LeFloch')
+
+    # Whwang
+    do_merge_radec(input_dict, f1_key= 'match_UgneLim_1d4GHzXS_3GHzlp',f2_key = 'MIPS_whwang', radius=4, fn_bestmatch = fn_Ugne_mipsW)
+    do_merge_radec(input_dict, f1_key= 'match_Lim_1d4GHzXS_3GHzlp',    f2_key = 'MIPS_whwang', radius=4, fn_bestmatch = fn_Lim_mipsW)
+    do_merge_radec(input_dict, f1_key= 'match_GaoLim_1d4GHzXS_3GHzlp', f2_key = 'MIPS_whwang', radius=4, fn_bestmatch = fn_Gao_mipsW)
+    set_RadioNotDet_MipsDet(fn_Ugne_mipsW, fn_Ugne_mipsW, mips='whwang')
+    set_RadioNotDet_MipsDet(fn_Lim_mipsW,  fn_Lim_mipsW, mips='whwang')
+    set_RadioNotDet_MipsDet(fn_Gao_mipsW,  fn_Gao_mipsW, mips='whwang')
+
+
+def set_RadioNotDet_MipsDet(fn_in, fn_out, mips='LeFloch'):
+
+    df = pd.read_csv(fn_in)
+    if mips =='LeFloch':
+        df['ra_nradio_mips']       = np.where(df['ra_radio'].notna(), np.nan, df['RA_J2000_24umLeFloch'])
+        df['dec_nradio_mips']      = np.where(df['ra_radio'].notna(), np.nan, df['DEC_J2000_24umLeFloch'])
+    elif mips =='whwang':
+        df['ra_nradio_mips']       = np.where(df['ra_radio'].notna(), np.nan, df['RA_mips24_24umWang'])
+        df['dec_nradio_mips']      = np.where(df['ra_radio'].notna(), np.nan, df['DEC_mips24_24umWang'])
+
+    if 'Unnamed: 0' in df.columns:
+        df.drop(df.columns[df.columns.str.contains('unnamed',case = False)],axis = 1, inplace = True)
+
+    # save csv
+    df.to_csv(fn_out, index=True, header=True)
+    print('Save matched catalog %s'%(fn_out))
+
+def crossmatch_IRAC(fn_dict):
+    
+    input_dict = {} # filename, column_ra, column_dec
+    input_dict['IRAC']                                      = [fn_dict['fn_IRAC'],                              'ra_irac',          'dec_irac']
+    
+    # radio detected
+    input_dict['match_UgneLim_1d4GHzXS_3GHzlp_IRAC']    = [fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp'],     'ra_radio',         'dec_radio']
+    input_dict['match_Lim_1d4GHzXS_3GHzlp_IRAC']        = [fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp'],         'ra_radio',         'dec_radio']
+    input_dict['match_GaoLim_1d4GHzXS_3GHzlp_IRAC']     = [fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp'],      'ra_radio',         'dec_radio']
+    do_merge_radec(input_dict, f1_key= 'match_UgneLim_1d4GHzXS_3GHzlp_IRAC',   f2_key = 'IRAC', radius=1, fn_bestmatch = fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_irac'])
+    do_merge_radec(input_dict, f1_key= 'match_Lim_1d4GHzXS_3GHzlp_IRAC',        f2_key = 'IRAC', radius=1, fn_bestmatch = fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_irac'])
+    do_merge_radec(input_dict, f1_key= 'match_GaoLim_1d4GHzXS_3GHzlp_IRAC',    f2_key = 'IRAC', radius=1, fn_bestmatch = fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_irac'])
+    
+    # radio non-detected
+    # LeFloch
+    input_dict['match_UgneLim_1d4GHzXS_3GHzlp_mipsL_IRAC']  = [fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsL'],   'ra_nradio_mips',   'dec_nradio_mips']
+    input_dict['match_Lim_1d4GHzXS_3GHzlp_mipsL_IRAC']      = [fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsL'],       'ra_nradio_mips',   'dec_nradio_mips']
+    input_dict['match_GaoLim_1d4GHzXS_3GHzlp_mipsL_IRAC']   = [fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsL'],    'ra_nradio_mips',   'dec_nradio_mips']
+    do_merge_radec(input_dict, f1_key= 'match_UgneLim_1d4GHzXS_3GHzlp_mipsL_IRAC', f2_key = 'IRAC', radius=2, fn_bestmatch = fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsL_irac'])
+    do_merge_radec(input_dict, f1_key= 'match_Lim_1d4GHzXS_3GHzlp_mipsL_IRAC',     f2_key = 'IRAC', radius=2, fn_bestmatch = fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsL_irac'])
+    do_merge_radec(input_dict, f1_key= 'match_GaoLim_1d4GHzXS_3GHzlp_mipsL_IRAC',  f2_key = 'IRAC', radius=2, fn_bestmatch = fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsL_irac'])
+
+    # Wang
+    input_dict['match_UgneLim_1d4GHzXS_3GHzlp_mipsW_IRAC']  = [fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsW'],   'ra_nradio_mips',   'dec_nradio_mips']
+    input_dict['match_Lim_1d4GHzXS_3GHzlp_mipsW_IRAC']      = [fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsW'],       'ra_nradio_mips',   'dec_nradio_mips']
+    input_dict['match_GaoLim_1d4GHzXS_3GHzlp_mipsW_IRAC']   = [fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsW'],    'ra_nradio_mips',   'dec_nradio_mips']
+    do_merge_radec(input_dict, f1_key= 'match_UgneLim_1d4GHzXS_3GHzlp_mipsW_IRAC', f2_key = 'IRAC', radius=2, fn_bestmatch = fn_dict['fn_match_UgneLim_1d4GHzXS_3GHzlp_mipsW_irac'])
+    do_merge_radec(input_dict, f1_key= 'match_Lim_1d4GHzXS_3GHzlp_mipsW_IRAC',     f2_key = 'IRAC', radius=2, fn_bestmatch = fn_dict['fn_match_Lim_1d4GHzXS_3GHzlp_mipsW_irac'])
+    do_merge_radec(input_dict, f1_key= 'match_GaoLim_1d4GHzXS_3GHzlp_mipsW_IRAC',  f2_key = 'IRAC', radius=2, fn_bestmatch = fn_dict['fn_match_GaoLim_1d4GHzXS_3GHzlp_mipsW_irac'])
+
 
 
 def do_merge_value(input_dict, f1_key, f2_key, f1_value, f2_value, join_type='inner', fn_match=None):
